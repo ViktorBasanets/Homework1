@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /*
         Restore array
     Given an unsorted array of positive integers.
@@ -26,24 +29,19 @@
 public class RestoreArray {
     public static void main(String[] args) {
 
-        // int [] array = {1, 2, -1, 4, -1, 6, 8, 7, -9, 5, -11, 3}; - also works!
-        int [] array = {1, 2, -1, 4, 7, 6, -2, 4};
+        int [] array = {1, 2, -1, 4, -1, 6, 8, 7, -9, 5, -11, 3}; // - also works!
+        // int [] array = {1, 2, -1, 4, 7, 6, -2, 4};
         show(array);
 
-        restore(array);
+        restoreArray(array);
         show(array);
     }
 
-    static void restore(int [] array) {
-        int i;
-        for (i = 0; i < array.length/2 - 1; i++) {
-            if(array[i + 1] - array[i] != 1) {
-                array[i + 1] = array[i] + 1;
-            }
-        }
-        for(i = array.length/2; i < array.length - 1; i++) {
-            if(array[i] - array[i + 1] != 1) {
-                array[i + 1] = array[i] - 1;
+    static void restoreArray(int [] array) {
+
+        for(int i = 0; i < array.length; i++) {
+            if (array[i] < 0) {
+                array[i] = (array[i - 1] + array[i + 1]) / 2;
             }
         }
     }
