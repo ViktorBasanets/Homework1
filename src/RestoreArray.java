@@ -32,6 +32,7 @@ public class RestoreArray {
         int [] array = {1, 2, -1, 4, -1, 6, 8, 7, -9, 5, -11, 3}; // - also works!
         // int [] array = {1, 2, -1, 4, 7, 6, -2, 4};
         show(array);
+        //System.out.println(Arrays.toString(array));
 
         restoreArray(array);
         show(array);
@@ -47,10 +48,10 @@ public class RestoreArray {
     }
 
     static void show(int [] array) {
-
+        System.out.print("[");
         for (int value : array) {
             System.out.print(value + " ");
         }
-        System.out.println();
+        System.out.print("]\n");
     }
 }
