@@ -35,14 +35,12 @@ public class Ranges {
         System.out.print("[" + array[0]);
         int i;
         for(i = 1; i < array.length - 1; i++) {
-            if (array[i] - array[i - 1] != 1) {
+            if ((array[i] - array[i - 1] != 1) && (array[i + 1] - array[i] != 1)) {
+                System.out.print("[" + array[i] + "]");
+            } else if (array[i] - array[i - 1] != 1) {
                 System.out.print("[" + array[i]);
             } else if (array[i + 1] - array[i] != 1) {
                 System.out.print(" " + array[i] + "]");
-            }
-
-            if ((array[i] - array[i - 1] != 1) && (array[i + 1] - array[i] != 1)) {
-                System.out.print("]");
             }
         }
         System.out.print(" " + array[i] + "]");
