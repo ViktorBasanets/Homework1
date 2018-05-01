@@ -20,6 +20,8 @@
     [1 3][5][8 10][13 16]
 */
 
+import java.util.Arrays;
+
 public class Ranges {
     public static void main(String[] args) {
 
@@ -27,7 +29,7 @@ public class Ranges {
 
         System.out.println("Input array:");
         show(array);
-
+        //System.out.println(Arrays.toString(array));
         rank(array);
     }
 
@@ -47,11 +49,11 @@ public class Ranges {
     }
 
     static void show(int [] array) {
-
+        System.out.print("[");
         for (int value : array) {
             System.out.print(value + " ");
         }
-        System.out.println();
+        System.out.print("]\n");
     }
 }
 
