@@ -27,6 +27,7 @@ public class ArrayRotation {
 
         System.out.println("Input array:");
         show(array);
+        //System.out.println(Arrays.toString(array));
 
         rotate(array, k);
 
@@ -46,9 +47,10 @@ public class ArrayRotation {
     }
 
     static void show(int [] array) {
-        for(int value : array) {
+        System.out.print("[");
+        for (int value : array) {
             System.out.print(value + " ");
         }
-        System.out.println();
+        System.out.print("]\n");
     }
 }
