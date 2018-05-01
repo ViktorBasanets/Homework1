@@ -20,8 +20,6 @@
     [1 3][5][8 10][13 16]
 */
 
-import java.util.*;
-
 public class Ranges {
     public static void main(String[] args) {
 
@@ -34,31 +32,20 @@ public class Ranges {
     }
 
     static void rank(int [] array) {
+        System.out.print("[" + array[0]);
+        int i;
+        for(i = 1; i < array.length - 1; i++) {
+            if (array[i] - array[i - 1] != 1) {
+                System.out.print("[" + array[i]);
+            } else if (array[i + 1] - array[i] != 1) {
+                System.out.print(" " + array[i] + "]");
+            }
 
-        List temp = new ArrayList();
-        int k;
-        for(k = 0; k < array.length - 1; k++) {
-            if(array[k + 1] - array[k] == 1) {
-                temp.add(array[k]);
-            } else {
-                temp.add(array[k]);
-                show(temp);
-                temp.clear();
+            if ((array[i] - array[i - 1] != 1) && (array[i + 1] - array[i] != 1)) {
+                System.out.print("]");
             }
         }
-        temp.add(array[k]);
-        show(temp);
-    }
-
-    private static void show(List temp) {
-
-        if(temp.size() != 1) {
-            System.out.print("["
-                    + Collections.min(temp) + " "
-                    + Collections.max(temp) + "]");
-        } else {
-            System.out.print(temp);
-        }
+        System.out.print(" " + array[i] + "]");
     }
 
     static void show(int [] array) {
