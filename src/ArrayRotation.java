@@ -13,7 +13,7 @@ public class ArrayRotation {
         show(array);
     }
 
-    static void rotate(int [] array, int k) {
+    private static void rotate(int [] array, int k) {
 
         if(k >= array.length) {
             System.err.println("'k' bigger then length the main array!!!");
@@ -35,7 +35,7 @@ public class ArrayRotation {
         }
     }
 
-    static void show(int [] array) {
+    private static void show(int [] array) {
 
         System.out.print("[");
         for (int value : array) {

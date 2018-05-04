@@ -7,12 +7,13 @@ public class RestoreArray {
         System.out.println("Input array:");
         show(array);
 
-        System.out.println("Restore array:");
         restoreArray(array);
+
+        System.out.println("Restore array:");
         show(array);
     }
 
-    static void restoreArray(int [] array) {
+    private static void restoreArray(int [] array) {
 
         for(int i = 0; i < array.length; i++) {
 
@@ -23,7 +24,7 @@ public class RestoreArray {
         }
     }
 
-    static void show(int [] array) {
+    private static void show(int [] array) {
         System.out.print("[");
         for (int value : array) {
             System.out.print(value + " ");

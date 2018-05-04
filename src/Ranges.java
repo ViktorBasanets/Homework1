@@ -11,7 +11,7 @@ public class Ranges {
         rank(array);
     }
 
-    static void rank(int [] array) {
+    private static void rank(int [] array) {
 
         System.out.print("[" + array[0]);
         int i;
@@ -27,7 +27,7 @@ public class Ranges {
         System.out.print(" " + array[i] + "]");
     }
 
-    static void show(int [] array) {
+    private static void show(int [] array) {
 
         System.out.print("[");
         for (int value : array) {
